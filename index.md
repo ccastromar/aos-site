@@ -50,7 +50,7 @@ No pretende competir con frameworks IA.
 Pretende explorar el punto medio.
 
 Otra visión más completa:
-Es un runtime de **meta-agentes donde cada agente es un pipeline definido en YAML.
+Es un runtime de **meta-agentes** donde cada agente es un pipeline definido en YAML.
 Y donde la selección de agente se decide por intención usando un LLM.
 Este agente pipeline está compuesto por steps (tools) que realizan:
 tareas de transformación, razonamiento, integración (http) o validación humana.
@@ -70,8 +70,8 @@ Las interacciones externas vía HTTP:
 - bases de datos via API
 - cualquier llamada remota
 
-Esto permite **composición de agentes:
-a su vez podemos pensar en un "step" humano como en otro agente humano, mezclando en un único pipeline funcionalidad mixta.
+Esto permite **composición de agentes**:
+a su vez podemos pensar en el "step" humano como otro agente (esta vez humano), mezclando en un único pipeline funcionalidades mixtas.
 ---
 
 # 🧩 3. Arquitectura conceptual
