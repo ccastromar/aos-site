@@ -49,6 +49,29 @@ No pretende reemplazar BPMN.
 No pretende competir con frameworks IA.
 Pretende explorar el punto medio.
 
+Otra visión más completa:
+Es un runtime de **meta-agentes donde cada agente es un pipeline definido en YAML.
+Y donde la selección de agente se decide por intención usando un LLM.
+Este agente pipeline está compuesto por steps (tools) que realizan:
+tareas de transformación, razonamiento, integración (http) o validación humana.
+
+Cada pipeline es un agente funcional, versionable y auditable.
+Antes de ejecutar cualquier pipeline, AOS ejecuta un Intent Step obligatorio mediante un LLM configurable (Ollama, Gemini, etc.).
+El LLM recibe la lista completa de intents permitidos y devuelve, en una sola llamada:
+- el intent seleccionado
+- la confianza
+- los parámetros iniciales
+- el contexto semántico extraído
+
+Las interacciones externas vía HTTP:
+- servicios SaaS
+- microservicios internos
+- otros agentes AOS expuestos como API HTTP
+- bases de datos via API
+- cualquier llamada remota
+
+Esto permite **composición de agentes:
+a su vez podemos pensar en un "step" humano como en otro agente humano, mezclando en un único pipeline funcionalidad mixta.
 ---
 
 # 🧩 3. Arquitectura conceptual
